@@ -18,209 +18,311 @@ _Note: obsolete downloads are available at the bottom of this page_
 
 IntelliJ hotkey
 
-반드시 익혀야할 단축키<br/><br/>
+Contents
+코드 Edit
+포커스
+검색
+자동완성
+리팩토링
+디버깅
+Git
+플러그인
 
-단축키	설명<br/>
-Ctrl + Shift + Space	적합한 코드 자동완성을 추천 (Smart Code Completion)<br/>
-Shift + Shift	파일, 클래스, 설정 등 키워드에 관련된 가능한 모든 것을 검색 (Search Everywhere)<br/>
-Alt + Enter	퀵픽스 제안 (Show intention actions and quick-fixes)<br/>
-Alt + Insert	생성자, Getter/Setter, toString과 같은 코드 생성<br/>
+계속해서 추가할 예정입니다!
 
-(Lombok으로 대체 가능)<br/>
+기본 단축키
+디렉터리, 패키지, 클래스 등 생성 목록 보기
+MacOS: Cmd + n
+Win/Linux: Alt + Insert
+코드 Edit
+Main method 생성 및 실행
+메인 메서드 선언
+live template 이용: psvm
+(live template은 아래 참고)
+메인 메서드 실행
+좌측 실행 버튼
+단축키
+현재 Focus 가 해당 메서드에 있어야 함
+MacOS: Ctrl + Shift + r
+Win/Linux: Ctrl + Shift + F10 - 이전 실행문 재실행 (우측 상단에 실행문 목록 확인 가능)
+MacOS: Ctrl + r
+Win/Linux: Shift + F10
+라인 수정하기
+라인 복제하기
+MacOS: Cmd + d
+Win/Linux: Ctrl + d
+라인 삭제하기
+MacOS: Cmd + 백스페이스
+Win/Linux: Ctrl + y
+문자열 라인 합치기
+MacOS: Ctrl + Shift + j
+Win/Linux: Ctrl + Shift + j
+라인 단위로 옮기기
+1) 문법에 관계 없이 라인 이동
+MacOS: Opt + Shift + ↑↓
+Win/Linux: Alt + Shift + ↑↓
+2) 구문 안에서만 라인 이동 (메서드를 벗어날 수 없음)
+MacOS: Cmd + Shift + ↑↓
+Win/Linux: Ctrl + Shift + ↑↓
+Element 단위로 옮기기
+Ex. html, xml 등의 규격이 정해진 마크업 언어에서 활용
 
-Ctrl + P	커서가 위치한 메서드의 매개변수 조회<br/>
-Ctrl + W	커서 근처의 코드 선택 영역 확대<br/>
-Ctrl + Shift + W	커서 근처의 코드 선택 영역 축소<br/>
-Ctrl + E	최근 연 파일 목록 검색<br/>
-Shift + F6	Rename<br/>
- 
+MacOS: Cmd + Opt + Shift + ←→
+Win/Linux: Ctrl + Alt + Shift + ←→
+코드 즉시 보기
+인자값 즉시 보기 (Parameter Info)
+MacOS: Cmd + p
+Win/Linux: Ctrl + p
+코드 구현부 즉시 보기 (Quick Definition)
+클래스- 클래스 전체 코드
+인스턴스- 인스턴스 생성 코드
+메서드- 메서드 정의 코드
+MacOS: Opt + Space
+Win/Linux: Ctrl + Shift + i
+Doc 즉시 보기 (Quick Documentation)
+MacOS: F1
+Win/Linux: Ctrl + q
+포커스
+포커스 에디터
+단어별 이동
+MacOS: Opt + ←→
+Win/Linux: Ctrl + ←→
+단어별 선택 (Move Caret to Next Word with Selection)
+MacOS: Opt + Shift + ←→
+Win/Linux: Ctrl + Shift + ←→
+라인 첫/끝 이동
+MacOS: fn + ←→
+Win/Linux: Home, End
+라인 전체 선택
+MacOS: fn + Shift + ←→
+Win/Linux: Shift + Home, End
+Page Up/Down
+MacOS: fn + ↑↓
+Win/Linux: Page Up, Page Down
+포커스 특수키
+포커스 범위 한 단계씩 늘리기 (Extend Selection)
+해당 커서의 단어 포커스하기
+MacOS: Opt + ↑↓
+Win/Linux
+위: Ctrl + w
+아래: Ctrl + Shift + w
+포커스 뒤로/앞으로 가기 (Navigate -> Back/Forward)
+이전 커서가 있던 화면으로 돌아갈 때 유용
+클래스 이동도 가능
+MacOS: Cmd + [ 또는 ]
+Win/Linux: Ctrl + Alt + ←→
+멀티 포커스 (Clone Caret Below)
+MacOS: Opt + Opt + ↓ (Opt 누른 상태)
+Win/Linux: Ctrl + Ctrl + ↓ (Ctrl 누른 상태)
+오류 라인으로 자동 포커스 (Navigate -> Next Highlighted Error)
+MacOS: F2
+Win/Linux: F2
+검색
+검색 텍스트
+현재 파일에서 검색 (Find)
+MacOS: Cmd + f
+Win/Linux: Ctrl + f
+현재 파일에서 교체 (Replace)
+MacOS: Cmd + r
+Win/Linux: Ctrl + r
+전체에서 검색 (Find in Path)
+MacOS: Cmd + Shift + f
+Win/Linux: Ctrl + Shift + f
+전체에서 교체 (Replace in Path)
+MacOS: Cmd + Shift + r
+Win/Linux: Ctrl + Shift + r
+정규표현식으로 검색, 교체
+[Find/Replace] -> Regex 체크
+검색 기타
+파일 검색 (Navigate -> File)
+MacOS: Cmd + Shift + o
+Win/Linux: Ctrl + Shift + n
+메서드 검색 (Navigate -> Symbol)
+MacOS: Cmd + Opt + o
+Win/Linux: Ctrl + Shift + Alt + n
+Action 검색 (Find Action: Enter action or option name)
+MacOS: Cmd + Shift + a
+Win/Linux: Ctrl + Shift + a
+최근 열었던 파일 목록 보기 (Recent Files)
+MacOS: Cmd + e
+Win/Linux: Ctrl + e
+최근 수정한 파일 목록 보기 (Recently Changed Files)
+MacOS: Cmd + Shift + e
+Win/Linux: Ctrl + Shift + e
+자동완성
+자동완성
+기본 자동완성 (Completion -> Basic)
+MacOS: Ctrl + Space
+Win/Linux: Ctrl + Space
+스마트 자동완성 (Completion -> SmartType)
+MacOS: Ctrl + Shift + Space
+Win/Linux: Ctrl + Shift + Space
+static method 자동완성
+MacOS: Ctrl + Space + Space
+Win/Linux: Ctrl + Space + Space
+getter/setter/생성자 자동완성 (Generate)
+MacOS: Cmd + n
+Win/Linux: Alt + Insert
+Override 메서드 자동완성 (Implement Methods)
+MacOS: Ctrl + i
+Win/Linux: Ctrl + i
+Live Template (Code Template)
+live template 목록 확인하기 (Insert Live Template)
+[Find Action] -> Live Templates 입력
+MacOS: Cmd + j
+Win/Linux: Ctrl + j
+자주 사용하는 live template 예시
+psvm: 메인메서드 선언
+sout: System.out.println(); 자동 생성
+나만의 live template 추가하기
+[Find Action] -> Live Templates 입력
+other 선택 -> “+” 버튼 -> Live Template
+Abbreviation(축약어)
+Ex. ent
+Description(설명)
+Ex. Entity Class Header
+Template text(텍스트)
+아래 예시
+Error(No applicable contexts yet.)에서 Define 클릭
+Ex. Java 선택
+Apply & OK
+// ORM에서의 반복적인 코드 (live template로 설정)
+@Getter
+@NoArgsConstructor(access = AccessLevel.PROOTECTED)
+@Entity
+/** Entity Class */
+public class Comment {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private long id;
+}
+리팩토링
+리팩토링 Extract
+변수 추출하기 (Extract -> Variable)
+MacOS: Cmd + Opt + v
+Win/Linux: Ctrl + Alt + v
+파라미터 추출하기 (Extract -> Parameter)
+MacOS: Cmd + Opt + p
+Win/Linux: Ctrl + Alt + p
+메서드 추출하기 (Extract -> Method)
+MacOS: Cmd + Opt + m
+Win/Linux: Ctrl + Alt + m
+이너클래스 추출하기
+MacOS: F6
+Win/Linux: F6
+리팩토링 기타
+이름 일괄 변경하기 (Rename)
+MacOS: Shift + F6
+Win/Linux: Shift + F6
+타입 일괄 변경하기 (Type Migration)
+MacOS: Cmd + Shift + F6
+Win/Linux: Ctrl + Shift + F6
+Import 정리하기 (Optimize Imports)
+MacOS: Ctrl + Opt + o
+Win/Linux: Ctrl + Alt + o
+자동 설정: [Find Action] -> Optimize imports on 입력 -> “Auto import: …”
+코드 자동 정렬하기 (Reformat Code)
+MacOS: Cmd + Opt + l
+Win/Linux: Ctrl + Alt + l
+디버깅
+디버깅
+Break Point 걸기 (Toggle Line Breakpoint)
+해당 라인 number 옆 클릭
+MacOS: Cmd + F8
+Win/Linux: Ctrl + F8
+Break Point의 라인은 아직 실행하기 전 상태이다.
+Conditional Break Point
+반복문에서 특정값을 가지고 있는 객체가 나왔을 때만 멈추고자 할 때 유용
+Break Point (빨간원) 우클릭 -> 조건 입력
+Ex. “HEEE”.equals(user.name)
+Debug 모드로 실행하기 - 즉시 실행 (Debug)
+현재 Focus 가 해당 메서드에 있어야 함
+좌측 디버그 실행 버튼
+MacOS: Ctrl + Shift + d
+Win/Linux: 없음 (커스텀해서 사용하거나 마우스 이용)
+Debug 모드로 실행하기 - 이전 실행
+이전 실행문 재실행 (우측 상단에 실행문 목록 확인 가능)
+MacOS: Ctrl + d
+Win/Linux: Shift + F9
+Breaking 상태에서의 기능
 
-General (일반적인 단축키)<br/>
 
-단축키	설명<br/>
-Alt + #[0-9]	IDEA 상단 도구창 순서에 맞는 도구창 띄움<br/>
-Ctrl + S	모두 저장<br/>
-Ctrl + Alt + Y	IntelliJ가 파일 시스템에서 최신 변경 사항을 처리하도록 강제<br/>
-일반적으로 변경 내용은 자동으로 처리되므로 작업은 아무 작업도 수행하지 않음<br/>
-Ctrl + Shift + F12	편집기 영역을 최대 크기로 토글<br/>
-Alt + Shift + I	현재 프로필 기준으로 현재 파일 검사<br/>
-Ctrl + `	인텔리제이 테마 변경<br/>
-
-* ` 는 javascript es6 문법에서 사용하는 ` (작은 따옴표 아님)<br/>
-Ctrl + Alt + S	설정 창을 띄움<br/>
-Ctrl + Alt + Shift + S	프로젝트 구조를 확인 및 변경할 수 있는 창을 띄움<br/>
-Ctrl + Shift + A	액션을 검색하여 실행<br/>
-
-* 저 같은 경우 주로 Shift + Shift를 사용<br/>
- 
-
-Debugging (디버깅 관련 단축키)<br/>
-
-단축키	설명<br/>
-F8 / F7	디버깅 한 단계씩 진행 (step into) / 디버깅 메서드 안으로 들어가면서 진행 (step out)<br/>
-Shift + F7 / Shift + F8	Smart step into / Smart step out<br/>
-Alt + F9	Run to cursor<br/>
-Alt + F8	Evaluate expression<br/>
-F9	Resume program<br/>
-Ctrl + F8	Toggle breakpoint<br/>
-Ctrl + Shift + F8	View breakpoints<br/>
- 
-
-Search / Replace (검색 및 대체 관련 단축키)<br/>
-
-단축키	설명<br/>
-Shift + Shift	파일, 클래스, 설정 등 키워드에 관련된 모든 것을 검색 (Search Everywhere)<br/>
-Ctrl + F	파일 내 검색<br/>
-F3 / Shift + F3	다음 검색 항목 / 이전 검색 항목<br/>
-Ctrl + R	대체 (Replace)<br/>
-Ctrl + Shift + F	Find in path<br/>
-Ctrl + Shift + R	Replace in path<br/>
-Alt + J	Select next occurrence<br/>
-Ctrl + Alt + Shift + J	Select all occurrences<br/>
-Alt + Shift + J	Unselect occurrence<br/>
- 
-
-Editing (편집기(IDE) 관련 단축키)<br/>
-
-단축키	설명<br/>
-Ctrl + Space	기본 코드 자동 완성 (Basic code completion)<br/>
-Ctrl + Shift + Space	적합한 자동완성 추천 (Smart code completion)<br/>
-Ctrl + Shift + Enter	문장 완성 (Complete statement)<br/>
-Ctrl + P	매개변수 정보 조회 (within method call arguments)<br/>
-Ctrl + Q	Quick documentation lookup<br/>
-Shift + F1	External Doc<br/>
-Ctrl + mouse	Brief info<br/>
-Ctrl + F1	Show descriptions of error at caret<br/>
-Alt + Insert	생성자, Getter/Setter, toString과 같은 코드 생성<br/>
-
-(Lombok으로 대체 가능)<br/>
-
-Ctrl + O	메서드 오버라이딩<br/>
-Ctrl + I	메서드 구현<br/>
-Ctrl + Alt + T	Surround with ...<br/>
-Ctrl + /	한줄 주석 생성 / 제거<br/>
-Ctrl + Shift + /	블록 주석 생성 / 제거<br/>
-Ctrl + W	커서 근처의 코드 선택 영역 확대<br/>
-Ctrl + Shift + W	커서 근처의 코드 선택 영역 축소<br/>
-Alt + Q	Context info<br/>
-Alt + Enter	퀵픽스 제안 (Show intention actions and quick-fixes)<br/>
-Ctrl + Alt + L	코드 정리 (Reformat code)<br/>
-Ctrl + Alt + O	import 정리 (Optimize imports)<br/>
-Ctrl + Alt + I	인덴트 맞춤 (Auto-indent lines)<br/>
-Tab / Shift Tab	인덴트 추가 / 제거 (Indent / unindent selected lines)<br/>
-Ctrl + X,<br/>
-Shift + Delete	Cut current line to clipboards<br/>
-Ctrl + C,<br/>
-Ctrl + Insert	Copy current line to clipboards<br/>
-Ctrl + V,<br/>
-Shift + Insert	Paste from clipboards<br/>
-Ctrl + Shift + V	Paste from recent buffers<br/>
-Ctrl + D	Duplicate current line<br/>
-Ctrl + Y	Delete line at caret<br/>
-Ctrl + Shift + J	Smart line join<br/>
-Ctrl + Enter	Start new split<br/>
-Shift + Enter	Start new line<br/>
-Ctrl + Shift + U	Toggle case for word at caret or selected block<br/>
-Ctrl + Shift + ]/[	Select till code block end / start<br/>
-Ctrl + Delete	Delete to word end<br/>
-Ctrl + Backspace	Delete to word start<br/>
-Ctrl + Numpad+/-	Expand / collapse code block<br/>
-Ctrl + Shift + Numpad+	Expand all<br/>
-Ctrl + Shift + Numpad-	Collapse all<br/>
-Ctrl + F4	Close active editor tab<br/>
- 
-
-Refactoring (소스 리팩토링 관련 단축키)<br/>
-
-단축키	설명<br/>
-F5	복사 (Copy)<br/>
-F6	이동 (Move)<br/>
-Alt + Delete	Safe Delete<br/>
-Shift + F6	이름 변경 (Rename)<br/>
-Ctrl + Alt + Shift + T	Refactor this<br/>
-Ctrl + F6	Change Signature<br/>
-Ctrl + Alt + N	Inline<br/>
-Ctrl + Alt + M	Extract Method<br/>
-Ctrl + Alt + V	Extract Variable<br/>
-Ctrl + Alt + F	Extract Field<br/>
-Ctrl + Alt + C	Extract Constant<br/>
-Ctrl + Alt + P	Extract Parameter<br/>
- 
-
-Navigation (이동 관련 단축키)<br/>
-
-단축키	설명<br/>
-Ctrl + N	Class로 이동<br/>
-Ctrl + Shift + N	파일로 이동<br/>
-Ctrl + Alt + Shift + N	Go to symbol<br/>
-Alt + Right / Left	에디터 탭 이동<br/>
-F12	Go back to previous tool window<br/>
-Esc	도구창으로부터 에디터로 이동<br/>
-Shift + Esc	Hide active or last active window<br/>
-Ctrl + G	라인으로 이동<br/>
-Ctrl + E	최근 연 파일 목록 검색<br/>
-Ctrl + Alt + Left / Right	Navigate back / forward<br/>
-Ctrl + Shift + Backspace	Navigate to last edit location<br/>
-Alt + F1	Select current file or symbol in any view<br/>
-Ctrl + B,<br/>
-Ctrl + Click	Go to declaration<br/>
-Ctrl + Alt + B	Go to implementations<br/>
-Ctrl + Shift + I	Open quick definition lookup<br/>
-Ctrl + Shift + B	Go to type declaratoin<br/>
-Ctrl + U	Go to super-method / super-class<br/>
-Alt + Up / Down	Go to previous / next method<br/>
-Ctrl + ] / [	Move to code block end / start<br/>
-Ctrl + F12	File structure popup<br/>
-Ctrl + H	Type hiearchy<br/>
-Ctrl + Shift + H	Method hiearchy<br/>
-F2 / Shift + F2	Call hiearchy<br/>
-F4 / Ctrl + Enter	Edit source / View source<br/>
-Alt + Home	Show navigation bar<br/>
-F11	Toggle bookmark<br/>
-Ctrl + F11	Toggle bookmark with mnemonic<br/>
-Ctrl + #[0-9]	IDEA 상단 도구창 순서에 맞는 도구창 띄움<br/>
-Shift + F11	Show bookmarks<br/>
- 
-
-Compile and Run (컴파일 및 실행 관련 단축키)<br/>
-
-단축키	설명<br/>
-Ctrl + F9	프로젝트 빌드<br/>
-Ctrl + Shift + F9	선택한 파일, 패키지 혹은 모듈 컴파일 (Compile selected file, package or module)<br/>
-Alt + Shift + F10 / F9	configuration 선택 후 실행 / 디버깅 (Select configuration and run / debug)<br/>
-Shift + F10 / F9	프로젝트 실행 / 디버깅<br/>
-Ctrl + Shift + F10	Run context configuratoin from editor<br/>
- 
-
-Usage Search (사용처 검색 관련 단축키)<br/>
-
-단축키	설명<br/>
-Alt + F7 / Ctrl + F7	사용처 탐색 / 파일 내 사용처 탐색 (Find usages / Find usages in file)<br/>
-Ctrl + Shift + F7	파일 내 사용처 하이라이트 (Highlight usages in file)<br/>
-Ctrl + Alt + F7	사용처 조회 (Show usages)<br/>
- 
-
-VCS / Local History (Git과 같은 버전 관리 시스템 관련 단축키)<br/>
-
-단축키	설명<br/>
-Ctrl + K	프로젝트 변경내역 commit (Commit project to VCS)<br/>
-Ctrl + T	Update project form VCS<br/>
-Ctrl + Shift + K	commit 내역 push (Push commits)<br/>
-Alt + `	VCS 관련 팝업 띄우기<br/>
-
-* ` 는 javascript es6 문법에서 사용하는 ` (작은 따옴표 아님)<br/>
- 
-
-Live Templates (인텔리제이 코드 템플릿 관련 단축키)<br/>
-Intellij Live Template이란 코드 템플릿을 미리 지정해서 편하게 코드를 작성할 수 있는 기능입니다.<br/>
-
-보다 자세한 내용은 링크를 참고해주세요.<br/>
-
- 
-
-단축키	설명<br/>
-Ctrl + Alt + J	Surround with Live Template<br/>
-Ctrl + J	Insert Live Template<br/>
+Resume (다음 Break Point로 넘어가기)
+MacOS: Opt + Cmd + r
+Win/Linux: F9
+참고 Debugger 탭 설명
+Debugger 탭 좌측 창 - Call Stack
+현재 Break Point로 넘어오기까지 실행한 메서드 목록
+오픈 소스 코드를 분석할 때 유용
+Debugger 탭 우측 창 - Variables
+현재 Break Point에서 볼 수 있는 변수값 목록
+Step Over (다음 라인으로 넘어가기)
+MacOS: F8
+Win/Linux: F8
+Step Into (해당 라인 안(다음 메서드)으로 들어가기)
+MacOS: F7
+Win/Linux: F7
+Step Out (현재 포커스를 밖으로 빼기)
+MacOS: Shift + F8
+Win/Linux: Shift + F8
+Evaluate Expression (현재 Breaking 상태에서 즉시 코드 실행하기)
+MacOS: Opt + F8
+Win/Linux: Alt + F8
+데이터가 잘 들어갔는지 확인할 때 유용
+켤 때마다 초기화 - 단발성 코드를 실행할 때 유용
+Watch (Breaking 이후의 코드 변경 확인하기)
+MacOS: 없음
+Win/Linux: 없음
+다음 Break Point 전까지 확인하고 싶은 값을 계속 주시하고자할 때 유용
+Git & Github
+Git 기본 기본 기능 사용하기
+Git View On
+View 탭 -> Tool Windows -> Version Control
+MacOS: Cmd + 9
+Win/Linux: Alt + 9
+Git Option Popup (VCS Operations Popup)
+MacOS: Ctrl + v
+Win/Linux: Alt + `(Back Quote)
+Git History
+MacOS: Ctrl + v => 4
+Win/Linux: Alt + ` => 4
+Branch
+MacOS: Ctrl + v => 7
+Win/Linux: Alt + ` => 7
+Commit
+MacOS: Cmd + k
+Win/Linux: Ctrl + k
+Push
+MacOS: Cmd + Shift + k
+Win/Linux: Ctrl + Shift + k
+Pull
+MacOS: [Find Action] => git pull 검색
+Win/Linux: [Find Action] => git pull 검색
+플러그인
+플러그인 설치 방법
+[Find Action] -> plugins 입력 -> Preferences/Settings의 Plugins 선택
+Browse repositories… 클릭
+Sort by: Downloads 로 설정
+추천 플러그인
+presentation assistant
+다른 OS에서 해당 단축키가 어떤 것인지 알려준다.
+발표/시연용으로 사용할 때 유용하다.
+.gitignore
+자동완성 기능을 제공한다.
+BashSupport
+실행 파일에 대한 여러 기능을 제공한다.
+Cf. 실행 권한 변경 후 실행 가능
+chmod +x app.sh
+Material Theme UI
+추천 테마
+jojoldu Translation
+영문 코드를 한글로, 한글을 영문으로 번역해주는 기능을 제공한다.
+관련된 Post
+Vim에서 유용한 단축키에 대해 알고 싶으시면 Vim 유용한 단축키 정리를 참고하시기 바랍니다.
+Reference
+https://www.inflearn.com/course/intellij-guide/lecture/13200
+이미지 참고
+https://gmlwjd9405.github.io/2019/05/21/intellij-shortkey.html
 
 
 
