@@ -17,7 +17,10 @@ public class MemberController {
 
     @Autowired
     public MemberController(MemberService memberService) {
+
         this.memberService = memberService;
+        // AOP 적용 후 의존관계가 되면 프록시로 가짜 코드가 생성이 되고, joinPoint.proceed()가 설정되면 진짜 코드가 나옴.
+        System.out.println("memberService : " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
